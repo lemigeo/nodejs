@@ -30,12 +30,7 @@ const User = sequelize.define('user', {
 });
 
 module.exports.createUser = (async(info) => {
-    return await User.build(info).save().then(result => {
-        return result;
-    }).catch(error => {
-        console.log(error);
-        return null;
-    });
+    return await User.build(info).save();
 });
 
 module.exports.getUser = (async(idx) => {
