@@ -1,14 +1,14 @@
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize('schema', 'username', 'password', {
-    host: '127.0.0.1',
+    host: 'localhost',
     port: 3306,
     dialect: 'mysql',
     define: {
         timestamps: false,
         freezeTableName: true,
     },
-    timezone: '+08:00',
+    timezone: '+10:00',
     pool: {
         max: 5,
         min: 1,
